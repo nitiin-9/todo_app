@@ -1,0 +1,120 @@
+<html> 
+
+<head>
+       <title> <%=title%></title>  
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+       <link rel="stylesheet"  href="/css/home.css">
+
+</head>
+
+<body>
+    
+   <div id=main-container> 
+
+      <h1> TODO APP</h1>  
+
+      <form action="/create-task" method="POST" id ="create-form">
+         <div id ="description-bar">  
+            <label for="description" class="heading"> DESCRIPTION</label> <br>
+            <input type="text" name="description" id ="description" placeholder="What do you need to do " >
+           </div>
+
+            <div id ="outer-options-div">
+
+                 <div id="inner-options-div"> 
+                   <label  class="heading for="select-category">CATEGORY </label>  <br>
+                   <select name ="category" id ="options">
+                   <option disabled selected>choose a category</option> 
+                   <option value="personal"> personal  </option>
+                   <option value="work"> work  </option> 
+                   <option value="school"> school  </option> 
+                   <option value="clean"> clean  </option> 
+                    <option value="other"> others  </option> 
+                   </select>
+                   
+                 </div>  
+
+                <div id="date-div"> 
+                   <label for="date">DUE DATE</label>  <br>
+                  <input  type="date" id="date" name="date"  required>
+
+                  
+                </div>  
+
+                <div id ="buttons-div">
+                    <div class="btn" id ="add-task-btn"> 
+                      <button type="submit" id ="button1">
+                       <i class="fa fa-plus"></i>
+                       ADD TASK
+                      </button>
+                      
+                    </div> 
+
+                    <div id ="del-task-btn">
+                     <button form = "delete-form" type="submit" id = "button2"> 
+                      <i class="fa fa-trash-o"></i>
+                      DELETE TASKS
+                     </button>
+                      
+                    </div>
+
+                  
+                </div>
+
+
+             
+           </div>
+           
+        
+        
+        </form>    
+
+
+        <form id="delete-form" action="/delete-task" method="POST">
+                
+                <div>
+                    
+                    <ul>
+                       
+                        <% for(let i of task_list) {%>
+                           
+                            <li >
+                            
+                                <div id="aside">
+                                    <div class="checkbox-des">
+                                        <input style="font-size:1.5rem; width:20px;" class="check-box" type="checkbox" name="<%=i._id %>" value="<%=i._id%>">
+                                        <span style="color: lightgray;font-size: larger;font-weight: 530;">&nbsp&nbsp<%= i.description %></span>
+                                        <p style="margin-left: 18px; color: gray;font-size: large;font-weight: bold;">&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-calendar-alt"></i>&nbsp&nbsp<%= i.due_date%></p>
+                                    </div>
+                                    <div id="side-catergory">
+                                        <p><%= i.category %></p>
+                                    </div> 
+                                    <div id="side-date">
+                                   <i class="fa fa-calendar" style="font-size:12px"></i>
+                                       <%= i.date %>
+
+                                    </div>
+                                    
+                                    
+                                </div>
+                              
+                            </li>
+                          
+                        <%}%>
+                    </ul>
+                </div>
+             
+            </form>
+            <!-- <hr> -->
+        </div>
+        <script type="text/javascript" src="/js/home.js"></script>
+</body>
+
+
+
+
+
+
+    
+</html>

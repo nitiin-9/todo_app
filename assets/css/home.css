@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    overflow: auto;
+    
+} 
+h1 {
+   color:white;
+}
+#main-container {
+  
+    color:white;
+ 
+    width:600px;
+    background-color:#454341;
+     text-align : center;
+     margin-left: 30%;
+
+}  
+
+#description-bar{
+ text-align:left;
+ margin-top : 0px;
+ margin-left: 5px;
+ height : 60px;
+ width:98%;
+ border:0px solid ;
+ background-color:#454341;
+  border-bottom:1px solid white;
+  border-top:1px solid;
+
+} 
+
+ input[type="text"] {
+   border : none;
+   color:white;
+   margin-top:5px;
+   width:90%;
+   background-color:transparent;
+   border-bottom: 1px solid;
+
+ }
+
+.heading {
+    margin-left:6px;
+}
+
+#inner-options-div {
+margin-top:20px;
+text-align:left;
+margin-left:5px;
+width:50%;
+background-color:#454341;
+height:60px;
+
+}
+
+#options {
+
+    width:92%;
+    height:35px;
+    background-color:#454341;
+    color:white;
+    border:none;
+    font-weight:500;
+     border-bottom:1px solid white;
+}
+option {
+    color:white;
+    font-size:larger;
+    background-color:#1c1b1a;
+} 
+
+#date-div {
+   
+    
+    background-color:#454341;
+    width:48%;
+    margin-left:305px;
+     margin-top:-50px;
+    height:60px;
+     border-left:1px solid;
+} 
+
+input[type="date"]{
+    color:white;
+    background-color:#454341;
+    border:none;
+    margin-top:5px;
+    border-bottom:1px solid white;
+} 
+
+button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+ 
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} 
+
+#buttons-div{
+    padding-top:20px;
+    display:flex;
+    justify-content: space-around;
+    border-top:1px solid;
+} 
+
+#button2 {
+    background-color:red;
+}  
+ // to make outline disable
+textarea:focus, input:focus{
+    outline: none;
+}
+ 
+ ul {
+     list-style:none;
+     margin:0px;
+     border-bottom : 2px solid;
+ } 
+ button : focus {
+     outline : none;
+ } 
+
+ input : focus {
+     outline:none;
+ }
+
+
+ .checkbox-des {
+     margin-left:-39px;
+     margin-top:2px;
+     text-align:left;
+     border-top:2px solid;
+   
+
+ }   
+ 
+  #side-catergory p {
+     padding:2px 1px;
+     font-weight:500;
+     font-size:1.2rem;
+     font-family: sans-serif;
+ }
+ #side-catergory { 
+   margin-right:35px;
+   background-color:blue;
+   background-repeat:no-repeat;
+   background-size:fix-content;
+   margin-top:-73px; 
+   width:120px; 
+  margin-left:72%;
+  height:30px;;
+  
+ } 
+
+ #side-date {
+     text-align:left;
+     margin-left:17px;
+     margin-top:-3px;
+ }
+ #aside{
+     margin-top:10px;
+    
+ } 
+
+ .checkbox-des:hover {
+  background-color:#63635f;
+}
+

@@ -1,21 +1,33 @@
 body{
-    margin: 0;
-    overflow: auto;
     
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:black;
+
+    
+     
+   
+   
+   
 } 
 h1 {
    color:white;
-}
+}  
+/* main container  */
 #main-container {
   
     color:white;
- 
+   max-height:76.7%;
     width:600px;
     background-color:#454341;
      text-align : center;
      margin-left: 30%;
+     border: 2px solid grey; 
+      box-shadow:  0px 0px  2px 1px gray;
+   
 
 }  
+  /* to do description */
 
 #description-bar{
  text-align:left;
@@ -29,7 +41,7 @@ h1 {
   border-top:1px solid;
 
 } 
-
+  /* input description */
  input[type="text"] {
    border : none;
    color:white;
@@ -40,10 +52,11 @@ h1 {
 
  }
 
+   /* heading -section */
 .heading {
     margin-left:6px;
 }
-
+ /* div containing options */
 #inner-options-div {
 margin-top:20px;
 text-align:left;
@@ -53,7 +66,7 @@ background-color:#454341;
 height:60px;
 
 }
-
+ /* catergory options */
 #options {
 
     width:92%;
@@ -63,13 +76,14 @@ height:60px;
     border:none;
     font-weight:500;
      border-bottom:1px solid white;
+     outline: none;
 }
 option {
     color:white;
     font-size:larger;
     background-color:#1c1b1a;
 } 
-
+   /* date section */
 #date-div {
    
     
@@ -88,6 +102,13 @@ input[type="date"]{
     margin-top:5px;
     border-bottom:1px solid white;
 } 
+  /* add and delete button section */ 
+  #buttons-div{
+    padding-top:20px;
+    display:flex;
+    justify-content: space-around;
+    border-top:1px solid;
+} 
 
 button{
   background-color: #4CAF50;
@@ -99,47 +120,47 @@ button{
  
   font-size: 16px;
   margin: 4px 2px;
-  cursor: pointer;
+  cursor: pointer; 
+  outline: none;
 } 
 
-#buttons-div{
-    padding-top:20px;
-    display:flex;
-    justify-content: space-around;
-    border-top:1px solid;
-} 
+
 
 #button2 {
     background-color:red;
 }  
- // to make outline disable
+  /* to make outline disable */
 textarea:focus, input:focus{
     outline: none;
 }
- 
+  /* list containing all tasks */
  ul {
      list-style:none;
      margin:0px;
      border-bottom : 2px solid;
+     overflow-y: scroll;
+     max-height:252px;
+     margin-bottom:-18px;
+     
  } 
- button : focus {
-     outline : none;
- } 
+  
 
  input : focus {
      outline:none;
  }
 
-
+ /* task description */
  .checkbox-des {
      margin-left:-39px;
      margin-top:2px;
      text-align:left;
-     border-top:2px solid;
+     border-top:2px solid; 
+   
+      
    
 
  }   
- 
+   /* task catergory */
   #side-catergory p {
      padding:2px 1px;
      font-weight:500;
@@ -154,10 +175,11 @@ textarea:focus, input:focus{
    margin-top:-73px; 
    width:120px; 
   margin-left:72%;
-  height:30px;;
+  height:30px; 
+  
   
  } 
-
+ /* date catergory */
  #side-date {
      text-align:left;
      margin-left:17px;
@@ -166,9 +188,26 @@ textarea:focus, input:focus{
  #aside{
      margin-top:10px;
     
- } 
-
+ }
+ /* task on hover */
  .checkbox-des:hover {
   background-color:#63635f;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}  
+
+
+/* media queries */
+@media only screen and (min-width: 768px) {
+    #main-container{
+     max-height:84%;
+     overflow-y:scroll;
+    } 
+    ul {
+     max-height:250px;
+    }
+}
+
 
